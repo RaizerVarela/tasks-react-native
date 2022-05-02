@@ -4,7 +4,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 platform :ios, '11.0'
 install! 'cocoapods', :deterministic_uuids => false
 
-target 'tasks' do
+target 'correcaoProjetoTask' do
   config = use_native_modules!
 
   # Flags change depending on the env values.
@@ -19,7 +19,11 @@ target 'tasks' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  target 'tasksTests' do
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+  pod 'react-native-safe-area-context', :path => '../node_modules/react-native-safe-area-context'
+
+  target 'correcaoProjetoTaskTests' do
     inherit! :complete
     # Pods for testing
   end
