@@ -39,7 +39,7 @@ function getCheckView(doneAt){
     )
   } else{
     return(
-      <View style={styles.pendding}></View>
+      <View style={styles.pending}></View>
     )
   }
 }
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     width: '20%',
     alignItems: 'center'
   },
-  pendding:{
+  pending:{
     height: 25,
     width: 25,
     borderRadius: 13,
